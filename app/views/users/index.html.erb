@@ -1,0 +1,29 @@
+<div class="span12">
+	<h3 style="display:inline;">System Users</h3>
+    <div class="btn-group pull-right">
+	    <button class="btn btn-inverse">Action</button>
+	    <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+	    	<span class="caret"></span>
+	    </button>
+	    <ul class="dropdown-menu">
+		    <li><a href="#">All Users</a></li>
+		    <li><a href="#">Admin Users</a></li>
+	    </ul>
+    </div>
+</div>
+
+<div class="span12 vspacerf">
+	<table class="table">
+		<thead>
+			<th> </th>
+			<th>Name</th>
+			<th>Email Address</th>
+			<th>Action</th>
+		</thead>
+		<tbody>
+			<%= render @users %>
+		</tbody>
+	</table>
+
+	<%= will_paginate %>
+</div>
