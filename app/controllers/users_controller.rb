@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to root_url, notice: "You Successfully Added the User"
+      redirect_to users_path, notice: "You Successfully Added the User"
     else
       render "new"
     end

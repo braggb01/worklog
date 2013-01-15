@@ -7,29 +7,33 @@
 <div class="row">
 	<div class="span12">
 		<h3>Jobs Completed</h3>
-	    <table class="table">
-	        <thead>
-	            <th>Entity</th>
-	            <th>Location</th>
-	            <th>Floor</th>
-	            <th>Product</th>
-	            <th>Engineer</th>
-	            <th>Install Date</th>
-	            <th>Action</th>
-	        </thead>
-	        <tbody>
-	            <% @user.jobs.each do |job| %>
-				<tr>
-					<td><%= job.entity.name %></td>
-					<td><%= job.location.address %></td>
-					<td><%= job.floor %></td>
-					<td><%= job.product.name %></td>
-					<td><%= job.user.name %></td>
-					<td><%= job.install_date %></td>
-					<td><%= link_to "view", job %> | <%= link_to "delete", job, method: :delete, data: { confirm: "You sure?" } %></td>
-				</tr>
-	            <% end %>
-	        </tbody>
-	    </table>
+        <% if @user.jobs.count < 1 %>
+            <h3>You have not entered any Jobs yet.  <%= link_to 'Enter One Now', new_job_path %></h3>
+        <% else %>
+		    <table class="table">
+		        <thead>
+		            <th>Entity</th>
+		            <th>Location</th>
+		            <th>Floor</th>
+		            <th>Product</th>
+		            <th>Engineer</th>
+		            <th>Install Date</th>
+		            <th>Action</th>
+		        </thead>
+		        <tbody>
+		            <% @user.jobs.each do |job| %>
+					<tr>
+						<td><%= job.entity.name %></td>
+						<td><%= job.location.address %></td>
+						<td><%= job.floor %></td>
+						<td><%= job.product.name %></td>
+						<td><%= job.user.name %></td>
+						<td><%= job.install_date %></td>
+						<td><%= link_to "view", job %> | <%= link_to "delete", job, method: :delete, data: { confirm: "You sure?" } %></td>
+					</tr>
+		            <% end %>
+		        </tbody>
+		    </table>
+	    <% end %>
 	</div>
 </div>
