@@ -1,6 +1,6 @@
 <div class="row vspacerf">
 	<div class="span12">
-		<h3><%= gravatar_for @user, size: 52 %> <%= @user.name %></h3>
+		<h3><%= gravatar_for @user, size: 52 %> <%= @user.name %> <small><% if @user.admin? %>Admin<% end %></small></h3>
 	</div>
 </div>
 <hr/>
