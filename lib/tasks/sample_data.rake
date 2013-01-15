@@ -18,13 +18,13 @@ def make_users
                        password: "aca1117",
                        password_confirmation: "aca1117")
   admin2.toggle!(:admin)
-  30.times do |n|
-    name  = Faker::Name.name
-    email = "example-#{n+1}@mssm.edu"
-    password  = "password"
-    User.create!(name:     name,
-                 email:    email,
-                 password: password,
-                 password_confirmation: password)
-  end
+  # 30.times do |n|
+  #   name  = Faker::Name.name
+  #   email = "example-#{n+1}@mssm.edu"
+  #   password  = "password"
+  #   User.create!(name:     name,
+  #                email:    email,
+  #                password: password,
+  #                password_confirmation: password)
+  # end
 end
