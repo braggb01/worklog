@@ -15,7 +15,7 @@
 <div class="span12 vspacerf">
 	<table class="table">
 		<thead>
-			<th> </th>
+			<% if current_user.admin? %><th> </th><% end %>
 			<th>Name</th>
 			<th>Email Address</th>
 			<th>Action</th>

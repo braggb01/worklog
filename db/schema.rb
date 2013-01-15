@@ -11,7 +11,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130114210427) do
+ActiveRecord::Schema.define(:version => 20130115144620) do
+
+  create_table "entities", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "jobs", :force => true do |t|
+    t.date     "install_date"
+    t.integer  "entity_id"
+    t.integer  "location_id"
+    t.string   "floor"
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.text     "comment"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "jobs", ["entity_id"], :name => "index_jobs_on_entity_id"
+  add_index "jobs", ["location_id"], :name => "index_jobs_on_location_id"
+  add_index "jobs", ["product_id"], :name => "index_jobs_on_product_id"
+  add_index "jobs", ["user_id"], :name => "index_jobs_on_user_id"
+
+  create_table "locations", :force => true do |t|
+    t.string   "address"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "vendor"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"

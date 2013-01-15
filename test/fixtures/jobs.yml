@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  install_date: 2013-01-15
+  entity: 
+  location: 
+  floor: MyString
+  product: 
+  user: 
+  comment: MyText
+
+two:
+  install_date: 2013-01-15
+  entity: 
+  location: 
+  floor: MyString
+  product: 
+  user: 
+  comment: MyText

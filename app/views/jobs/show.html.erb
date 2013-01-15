@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Install date:</b>
+  <%= @job.install_date %>
+</p>
+
+<p>
+  <b>Entity:</b>
+  <%= @job.entity %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @job.location %>
+</p>
+
+<p>
+  <b>Floor:</b>
+  <%= @job.floor %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%= @job.product %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @job.user %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @job.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

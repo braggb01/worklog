@@ -1,6 +1,18 @@
 Worklog::Application.routes.draw do
 
 
+  resources :jobs
+
+
+  resources :products
+
+
+  resources :locations
+
+
+  resources :entities
+
+
   get 'faq', to: 'pages#faq', as: 'faq'
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
