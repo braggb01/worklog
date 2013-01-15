@@ -1,0 +1,5 @@
+<tr>
+	<td><%= product.vendor %></td>
+	<td><%= product.name %></td>
+	<td><%= link_to "view", product %> | <%= link_to "delete", product, method: :delete, data: { confirm: "You sure?" } %></td>
+</tr>

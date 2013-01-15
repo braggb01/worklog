@@ -1,11 +1,35 @@
-<div class="span12">
-	<h3>User <small><%= @user.name %></small></h3>
+<div class="row vspacerf">
+	<div class="span12">
+		<h3><%= gravatar_for @user, size: 52 %> <%= @user.name %></h3>
+	</div>
 </div>
-<div class="span9">
-	<hr/>
-</div>
-<div class="span3">
-	<div class="thumbnail">
-		<%= gravatar_for_large @user, size: 400 %>
+<hr/>
+<div class="row">
+	<div class="span12">
+		<h3>Jobs Completed</h3>
+	    <table class="table">
+	        <thead>
+	            <th>Entity</th>
+	            <th>Location</th>
+	            <th>Floor</th>
+	            <th>Product</th>
+	            <th>Engineer</th>
+	            <th>Install Date</th>
+	            <th>Action</th>
+	        </thead>
+	        <tbody>
+	            <% @user.jobs.each do |job| %>
+				<tr>
+					<td><%= job.entity.name %></td>
+					<td><%= job.location.address %></td>
+					<td><%= job.floor %></td>
+					<td><%= job.product.name %></td>
+					<td><%= job.user.name %></td>
+					<td><%= job.install_date %></td>
+					<td><%= link_to "view", job %> | <%= link_to "delete", job, method: :delete, data: { confirm: "You sure?" } %></td>
+				</tr>
+	            <% end %>
+	        </tbody>
+	    </table>
 	</div>
 </div>

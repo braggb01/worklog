@@ -1,6 +1,13 @@
-<h1>Editing entity</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @entity %> |
-<%= link_to 'Back', entities_path %>
+<div class="row">
+	<div class="span12 vspacerf">
+	    <h3 style="display:inline;">Edit Entity</h3>
+	    <div class="pull-right">
+	        <%= link_to 'Show', @entity %> | <%= link_to 'Back', entities_path %>
+	    </div>
+	</div>
+</div>
+<div class="row">
+	<div class="span6 offset3 vspacera well">
+		<%= render 'form' %>
+	</div>
+</div>

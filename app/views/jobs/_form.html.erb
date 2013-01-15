@@ -1,45 +1,12 @@
-<%= form_for(@job) do |f| %>
-  <% if @job.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
-
-      <ul>
-      <% @job.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :install_date %><br />
-    <%= f.date_select :install_date %>
-  </div>
-  <div class="field">
-    <%= f.label :entity %><br />
-    <%= f.text_field :entity %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :floor %><br />
-    <%= f.text_field :floor %>
-  </div>
-  <div class="field">
-    <%= f.label :product %><br />
-    <%= f.text_field :product %>
-  </div>
-  <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </div>
-  <div class="field">
-    <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+<%= simple_form_for(@job, :html => {:class => 'form-horizontal' }) do |f| %>
+  <%= f.input :install_date, :as => :datepicker, :label => 'Install Date:', :input_html => { :class => 'span3' } %>
+  <%= f.association :entity, :as => :radio_buttons, :label => 'Entity:', :label_method => :name, :value_method => :id, :include_blank => false %>
+  <%= f.association :location, :label => 'Location:', :input_html => { :class => 'span3' }, :label_method => :address, :value_method => :id, :include_blank => false %>
+  <%= f.input :floor, :collection => ["SC", "MC"].concat((1..30).to_a), :label => 'Floor:', :input_html => { :class => 'span3' } %>
+  <%= f.association :product, :label => 'Product:', :input_html => { :class => 'span3', :label_method => :name, :value_method => :id, :include_blank => false } %>
+  <%= f.association :user, :label => 'User:', :input_html => { :class => 'span3' } %>
+  <%= f.input :comment, :as => :text, :label => 'Comment:', :input_html => { :class => 'span3', :rows => 10 } %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
   </div>
 <% end %>
