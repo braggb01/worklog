@@ -2,7 +2,7 @@ class EntitiesController < ApplicationController
   # GET /entities
   # GET /entities.json
   def index
-    @entities = Entity.paginate(page: params[:page]).per_page(10)
+    @entities = Entity.paginate(page: params[:page]).per_page(25)
 
     respond_to do |format|
       format.html # index.html.erb

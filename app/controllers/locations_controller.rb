@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.paginate(page: params[:page]).per_page(10)
+    @locations = Location.paginate(page: params[:page]).per_page(25)
 
     respond_to do |format|
       format.html # index.html.erb
