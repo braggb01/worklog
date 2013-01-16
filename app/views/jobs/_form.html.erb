@@ -2,7 +2,7 @@
   <%= f.input :install_date, :as => :datepicker, :label => 'Install Date:', :input_html => { :class => 'span3' } %>
   <%= f.association :entity, :as => :radio_buttons, :label => 'Entity:', :label_method => :name, :value_method => :id, :include_blank => false %>
   <%= f.association :location, :label => 'Location:', :input_html => { :class => 'span3' }, :label_method => :address, :value_method => :id, :include_blank => false %>
-  <%= f.input :floor, :collection => ["SC", "MC"].concat((1..30).to_a), :label => 'Floor:', :input_html => { :class => 'span3' } %>
+  <%= f.input :floor, :collection => ["SC Level", "MC Level", "B2 Level", "B1 Level"].concat((1..30).to_a), :label => 'Floor:', :input_html => { :class => 'span3' } %>
   <%= f.association :product, :label => 'Product:', :input_html => { :class => 'span3', :label_method => :name, :value_method => :id, :include_blank => false } %>
   <%= f.association :user, :label => 'User:', :input_html => { :class => 'span3' } %>
   <%= f.input :comment, :as => :text, :label => 'Comment:', :input_html => { :class => 'span3', :rows => 10 } %>

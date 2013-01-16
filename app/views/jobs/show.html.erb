@@ -9,7 +9,7 @@
 <div class="row vspacera">
   <div class="span12">
     <p>
-      <%= @job.user.name %> added a <%= @job.product.name %> to <%= @job.location.address %> (<%= @job.floor %>).  This is on the <%= @job.entity.name %> network.
+      <%= @job.user.name %> added a <%= @job.product.name %> to <%= @job.location.address %> (<% if @job.floor == "MC Level" || @job.floor == "SC Level" || @job.floor == "B1 Level" || @job.floor == "B2 Level" %><%= @job.floor %><% else %><%= @job.floor.to_i.ordinalize %> Floor<% end %>).  This is on the <%= @job.entity.name %> network.
     </p>
   </div>
   <div class="span12">
