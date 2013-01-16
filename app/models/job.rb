@@ -8,7 +8,7 @@ class Job < ActiveRecord::Base
   	validates_presence_of :install_date, :floor, :entity, :location, :product, :user
 
 	include PgSearch
-	pg_search_scope :search, against: [:install_date], using: {tsearch: {dictionary: "english"}}, associated_against: {user: :name, location: :address}
+	pg_search_scope :search, against: [:install_date], using: {tsearch: {dictionary: "english"}}, associated_against: {user: :name, location: :address, products: [:vendor, :name] }
 
 	def self.text_search(query)
 	  if query.present?
