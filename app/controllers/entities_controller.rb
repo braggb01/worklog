@@ -7,6 +7,7 @@ class EntitiesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @entities }
+      format.js
     end
   end
 

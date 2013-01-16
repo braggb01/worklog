@@ -1,0 +1,7 @@
+$('#entities').append('<%= j render(@entities) %>');
+<% if @entities.next_page %>
+$('.pagination').replaceWith('<%= j will_paginate(@entities) %>');
+<% else %>
+$('.pagination').remove();
+<% end %>
+<% sleep 1 %>

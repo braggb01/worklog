@@ -27,12 +27,12 @@
                     <th>Install Date</th>
                     <th>Action</th>
                 </thead>
-                <tbody>
+                <tbody id="jobs">
                     <%= render @jobs %>
                 </tbody>
             </table>
 
-            <%= will_paginate %>
+            <%= will_paginate @jobs %>
         <% end %>
     </div>
 </div>

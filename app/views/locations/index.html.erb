@@ -22,12 +22,12 @@
                     <th>Address</th>
                     <th>Action</th>
                 </thead>
-                <tbody>
+                <tbody id="locations">
                     <%= render @locations %>
                 </tbody>
             </table>
 
-            <%= will_paginate %>
+            <%= will_paginate @locations %>
         <% end %>
     </div>
 </div>

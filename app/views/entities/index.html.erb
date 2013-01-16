@@ -22,12 +22,12 @@
                     <th>Name</th>
                     <th>Action</th>
                 </thead>
-                <tbody>
+                <tbody id="entities">
                     <%= render @entities %>
                 </tbody>
             </table>
 
-            <%= will_paginate %>
+            <%= will_paginate @entities %>
         <% end %>
     </div>
 </div>

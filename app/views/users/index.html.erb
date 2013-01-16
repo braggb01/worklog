@@ -21,11 +21,11 @@
 				<th>Email Address</th>
 				<% if current_user.admin? %><th>Action</th><% end %>
 			</thead>
-			<tbody>
+			<tbody id="users">
 				<%= render @users %>
 			</tbody>
 		</table>
 
-		<%= will_paginate %>
+		<%= will_paginate @users %>
 	</div>
 </div>

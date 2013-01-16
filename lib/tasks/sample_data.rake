@@ -2,8 +2,9 @@ namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
     make_users
-    # make_microposts
-    # make_relationships
+    # make_locations
+    # make_entities
+    # make_products
   end
 end
 
@@ -18,7 +19,7 @@ def make_users
                        password: "aca1117",
                        password_confirmation: "aca1117")
   admin2.toggle!(:admin)
-  # 30.times do |n|
+  # 99.times do |n|
   #   name  = Faker::Name.name
   #   email = "example-#{n+1}@mssm.edu"
   #   password  = "password"
@@ -28,3 +29,18 @@ def make_users
   #                password_confirmation: password)
   # end
 end
+
+# def make_locations
+#   99.times do
+#     streetaddress = Faker::Address.street_address
+#     Location.create!(address: streetaddress)
+#   end
+# end
+
+# def make_entities
+#   Entity.create!(name: 'Hospital')
+#   Entity.create!(name: 'School')
+# end
+
+# def make_products
+# end
