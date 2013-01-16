@@ -6,4 +6,17 @@ class Job < ActiveRecord::Base
 	attr_accessible :comment, :floor, :install_date, :entity_id, :location_id, :product_id, :user_id
 
   	validates_presence_of :install_date, :floor, :entity, :location, :product, :user
+
+	include PgSearch
+	pg_search_scope :search, against: [:install_date], using: {tsearch: {dictionary: "english"}}, associated_against: {user: :name, location: :address}
+
+	def self.text_search(query)
+	  if query.present?
+	    search(query)
+	  else
+	    scoped
+	  end
+	end
+
+
 end

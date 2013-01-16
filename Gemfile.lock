@@ -68,6 +68,9 @@ GEM
     mime-types (1.19)
     multi_json (1.5.0)
     pg (0.14.1)
+    pg_search (0.5.7)
+      activerecord (>= 3)
+      activesupport (>= 3)
     polyglot (0.3.3)
     rack (1.4.4)
     rack-cache (1.2)
@@ -142,6 +145,7 @@ DEPENDENCIES
   jquery-rails
   less-rails
   pg
+  pg_search
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   simple_form

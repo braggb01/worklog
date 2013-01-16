@@ -1,3 +1,9 @@
+<% content_for :search do %>
+    <%= form_tag jobs_path, method: :get, :class => "navbar-search pull-right" do %>
+        <%= text_field_tag :query, params[:query], :class => "search-query", :placeholder => "Search" %>
+    <% end %>
+<% end %>
+
 <div class="row">
     <div class="span12 vspacerf">
         <h3 style="display:inline;">Jobs</h3>

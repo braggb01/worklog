@@ -11,7 +11,7 @@
             <!-- Be sure to leave the brand out there if you want it shown -->
             <!-- <a class="brand" href="#">WorkLog</a> -->
             <%= link_to 'Workload', root_url, class: 'brand' %>
-             
+            <% if current_user %><%= yield :search %><% end %>
             <!-- Everything you want hidden at 940px or less, place within here -->
             <div class="nav-collapse collapse">
                 <ul class="nav pull-right">
