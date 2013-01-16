@@ -1,13 +1,8 @@
-<h1>Log In</h1>
-
-<%= form_tag sessions_path do %>
-	<div class="field">
-	      <%= label_tag :email %><br />
-	      <%= text_field_tag :email, params[:email] %>
-	</div>
-	<div class="field">
-	      <%= label_tag :password %><br />
-	      <%= password_field_tag :password %>
-	</div>
-	<div class="actions"><%= submit_tag "Log In" %>
+<%= form_tag sessions_path, :class => "form-signin" do %>
+	<h2 class="form-signin-heading">Sign In</h2>
+	<hr/>
+    <%= text_field_tag :email, params[:email], :placeholder => "Email Address", :class => "input-block-level" %>
+    <%= password_field_tag :password, nil, :placeholder => "Password", :class => "input-block-level" %>
+    <hr/>
+	<div class="actions"><%= submit_tag "Log In", :class => "btn btn-primary" %>
 <% end %>

@@ -50,6 +50,99 @@
 	padding-top: 20px;	
 }
 
+// JUMBOTRON  ------------------------>
+.jumbotron:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.jumbotron {
+    background: url("/assets/header.jpg") center 29% no-repeat #670B7A;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset, 0 -3px 7px rgba(0, 0, 0, 0.2) inset;
+    color: #FFFFFF;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+.jumbotron .container {
+    position: relative;
+    z-index: 2;
+}
+.jumbotron h1 {
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.jumbotron p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.jumbotron p.response {
+  font-size: 300px;
+  i {
+    padding-right: 60px;
+  }
+}
+.masthead {
+    color: #FFFFFF;
+    margin-bottom: 0;
+    padding: 80px 0;
+    h1 {
+      font-size: 120px;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+    p {
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.25;
+    }
+    .btn {
+        -moz-transition: none 0s ease 0s;
+        border: 0 none;
+        border-radius: 6px 6px 6px 6px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 1px 5px rgba(0, 0, 0, 0.25);
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: 200;
+        padding: 14px 24px;
+    }
+}
+.masthead-links {
+    list-style: none outside none;
+    margin: 0;
+}
+
+.social {
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #FFFFFF;
+    padding: 15px 0;
+    text-align: center;
+}
+.social-buttons {
+    list-style: none outside none;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+.social-buttons li {
+    display: inline-block;
+    line-height: 1;
+    padding: 5px 8px;
+}
+
 // GRAVITAR CSS ----------------------->
 .gravatar {
   float: left;
@@ -68,4 +161,26 @@
   vertical-align: middle;
 }
 
+// LOGIN FORM CSS  -------------------------->
+.form-signin {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin: 0 auto 20px;
+    max-width: 300px;
+    padding: 38px 58px 58px;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin input[type="text"], .form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox {
+    margin-bottom: 10px;
+}
 
