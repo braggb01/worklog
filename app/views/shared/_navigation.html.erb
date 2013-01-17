@@ -10,7 +10,11 @@
              
             <!-- Be sure to leave the brand out there if you want it shown -->
             <!-- <a class="brand" href="#">WorkLog</a> -->
-            <div class="logo"><%= link_to 'W', root_url, class: 'brand' %></div>
+            <div class="logo">
+                <%= link_to root_url, class: 'brand' do %>
+                    <i class="icon-truck">   </i>
+                <% end %>
+            </div>
             <% if current_user %><%= yield :search %><% end %>
             <!-- Everything you want hidden at 940px or less, place within here -->
             <div class="nav-collapse collapse">
