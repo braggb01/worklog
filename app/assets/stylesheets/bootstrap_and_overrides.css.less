@@ -32,21 +32,6 @@
 // Example:
 // @linkColor: #ff0000;
 
-// GLOBAL CSS ------------------------>
-@media (min-width: 980px) {
-  body {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-body {
-    padding-left: 0;
-    padding-right: 0;
-}
-.navbar-fixed-top {
-    margin: 0;
-}
 
 // MOVEMENT CSS ---------------------->
 .vspacera {
@@ -229,3 +214,39 @@ li.activity {
     line-height: 30px;
 }
 
+// GLOBAL CSS ------------------------>
+@media (min-width: 980px) {
+  body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .masthead h1 {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .masthead h1 {
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .masthead h1 {
+        font-size: 60px;
+    }
+    .masthead p {
+        font-size: 25px;
+    }
+}
+
+body {
+    padding-left: 0;
+    padding-right: 0;
+}
+.navbar-fixed-top {
+    margin: 0;
+}
